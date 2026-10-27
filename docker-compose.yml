@@ -1,0 +1,16 @@
+services:
+  demo-api:
+    image: python:3.12-slim
+    working_dir: /app
+    volumes:
+      - ./:/app
+    command: ["python3", "demo_server.py", "--port", "8901"]
+
+  health-checker:
+    image: python:3.12-slim
+    working_dir: /app
+    volumes:
+      - ./:/app
+    command: ["python3", "health_checker.py", "--config", "endpoints.docker.json", "--interval", "60"]
+    depends_on:
+      - demo-api
