@@ -2,6 +2,8 @@
 
 Watch the APIs your work depends on.
 
+Demo video (57 s): https://youtu.be/CPAxAWRG0aE
+
 A small Python tool that checks a list of HTTP endpoints on a schedule and
 reports what a support engineer needs before opening an incident: which
 services are up, which are slow, and which are down — with latency, status
